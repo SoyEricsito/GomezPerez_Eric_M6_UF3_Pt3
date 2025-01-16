@@ -1,0 +1,68 @@
+@use 'variables';
+
+// _footer.scss
+
+footer {
+    background-color: variables.$navbar-background-color;
+    color: variables.$navbar-link-color;
+    padding: 20px 0;
+    text-align: center;
+
+    .footer-content {
+        max-width: variables.$main-container-width;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .footer-logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: variables.$navbar-link-color;
+
+            &:hover {
+                color: variables.$navbar-link-hover-color;
+            }
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+
+            li {
+                a {
+                    color: variables.$navbar-link-color;
+                    text-decoration: none;
+                    transition: color 0.3s;
+
+                    &:hover {
+                        color: variables.$navbar-link-hover-color;
+                    }
+                }
+            }
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 10px;
+
+            a {
+                color: variables.$navbar-link-color;
+                font-size: 1.2em;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: variables.$navbar-link-hover-color;
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        margin-top: 20px;
+        font-size: 0.9em;
+    }
+}

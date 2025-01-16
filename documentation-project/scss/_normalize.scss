@@ -1,0 +1,108 @@
+/* Este archivo contiene normalizaciones de CSS para asegurar la consistencia entre navegadores. */
+@use 'variables';
+
+html {
+    line-height: 1.15; /* Mejorar la legibilidad */
+    -webkit-text-size-adjust: 100%; /* Evitar el ajuste de tamaño de texto en iOS */
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+hr {
+    box-sizing: content-box; /* Asegurar que el ancho se calcule correctamente */
+    height: 0; /* Eliminar el alto predeterminado */
+    overflow: visible; /* Asegurar que el contenido no se recorte */
+}
+
+pre {
+    font-family: monospace, monospace; /* Usar fuente monoespaciada */
+    font-size: 1em; /* Tamaño de fuente por defecto */
+}
+
+a {
+    background-color: transparent; /* Eliminar el fondo predeterminado */
+}
+
+abbr[title] {
+    text-decoration: underline; /* Subrayar abreviaturas */
+    text-decoration: underline dotted; /* Subrayado punteado */
+}
+
+b,
+strong {
+    font-weight: bolder; /* Aumentar el peso de la fuente */
+}
+
+code,
+kbd,
+samp {
+    font-family: monospace, monospace; /* Usar fuente monoespaciada */
+    font-size: 1em; /* Tamaño de fuente por defecto */
+}
+
+small {
+    font-size: 80%; /* Tamaño de fuente más pequeño */
+}
+
+sub {
+    font-size: 75%; /* Tamaño de fuente más pequeño para subíndices */
+    line-height: 0; /* Ajustar la línea */
+    position: relative; /* Posicionamiento relativo */
+    bottom: 0.25em; /* Ajustar la posición */
+}
+
+sup {
+    font-size: 75%; /* Tamaño de fuente más pequeño para superíndices */
+    line-height: 0; /* Ajustar la línea */
+    position: relative; /* Posicionamiento relativo */
+    top: 0.5em; /* Ajustar la posición */
+}
+
+table {
+    border-collapse: collapse; /* Colapsar bordes de la tabla */
+    border-spacing: 0; /* Eliminar el espaciado entre celdas */
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit; /* Heredar la fuente del elemento padre */
+    font-size: inherit; /* Heredar el tamaño de fuente del elemento padre */
+    line-height: inherit; /* Heredar la altura de línea del elemento padre */
+    margin: 0; /* Eliminar márgenes predeterminados */
+}
+
+button,
+select {
+    text-transform: none; /* Evitar la transformación de texto */
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button; /* Estilo de botón en WebKit */
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none; /* Eliminar el borde interno en Firefox */
+    padding: 0; /* Eliminar el padding interno en Firefox */
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box; /* Asegurar que el tamaño se calcule correctamente */
+    padding: 0; /* Eliminar el padding predeterminado */
+}

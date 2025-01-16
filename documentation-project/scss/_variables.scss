@@ -1,0 +1,27 @@
+@use 'sass:color';
+
+$primary-color: #910000;
+$secondary-color: #bb0202;
+$font-stack: 'Helvetica Neue', Arial, sans-serif;
+$main-container-width: 1200px;
+
+$enable-rounded: true;
+$enable-shadows: true;
+$enable-gradients: false;
+$enable-transitions: true;
+
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+$navbar-background-color: #310000;
+$navbar-padding: 1rem;
+$navbar-item-margin: 1rem;
+$navbar-active-color: #fff;
+$navbar-link-color: #ddd;
+$navbar-link-padding: 0.5rem 1rem;
+$navbar-link-hover-color: #fff;
+
+$link-color: #3498db; // Define el color del enlace
+$link-hover-color: color.adjust($link-color, $lightness: -10%); // Define el color del enlace al pasar el ratón

@@ -1,0 +1,55 @@
+@use 'variables';
+
+.navbar {
+    background-color: variables.$navbar-background-color;
+    padding: variables.$navbar-padding;
+    box-shadow: 0 4px 6px rgb(83, 0, 0);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__brand {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: variables.$navbar-link-color;
+        text-decoration: none;
+
+        &:hover {
+            color: variables.$navbar-link-hover-color;
+        }
+    }
+
+    &__menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    &__item {
+        margin-right: variables.$navbar-item-margin;
+        
+        &--active {
+            font-weight: bold;
+            color: variables.$navbar-active-color;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: variables.$navbar-link-color;
+        padding: variables.$navbar-link-padding;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: variables.$navbar-link-hover-color;
+        }
+    }
+}

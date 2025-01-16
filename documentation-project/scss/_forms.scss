@@ -1,0 +1,48 @@
+// Fitxer parcial que defineix els estils per als formularis.
+@use 'variables';
+
+$form-padding: 1rem;
+$form-border-radius: 0.25rem;
+$form-border-color: #ced4da;
+$form-background-color: #ffffff;
+
+.form-group {
+    margin-bottom: 1rem;
+
+    label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+    }
+
+    input,
+    textarea,
+    select {
+        width: 100%;
+        padding: $form-padding;
+        border: 1px solid $form-border-color;
+        border-radius: $form-border-radius;
+        background-color: $form-background-color;
+        font-size: 1rem;
+
+        &:focus {
+            border-color: #80bdff;
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+        }
+    }
+}
+
+.btn-form {
+    display: inline-block;
+    padding: $form-padding;
+    border: none;
+    border-radius: $form-border-radius;
+    background-color: #007bff;
+    color: #ffffff;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #0056b3;
+    }
+}

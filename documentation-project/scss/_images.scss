@@ -1,0 +1,23 @@
+// Fitxer parcial que defineix els estils per a les imatges.
+@use 'variables';
+
+.image-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+.image-rounded {
+    border-radius: 0.5rem;
+}
+
+.image-shadow {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.image-thumbnail {
+    display: inline-block;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    background-color: #f8f9fa;
+}

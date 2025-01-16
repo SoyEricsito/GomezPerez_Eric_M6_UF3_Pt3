@@ -1,0 +1,32 @@
+// Fitxer parcial que conté els estils per a la graella del framework.
+@use 'variables';
+
+$grid-columns: 12; // Nombre de columnes per defecte
+$grid-gutter: 1.5rem; // Espai entre columnes
+
+// Estils per a la graella
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $grid-gutter;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.col {
+    flex: 0 0 calc(100% / $grid-columns);
+    max-width: calc(100% / $grid-columns);
+    padding: 0 calc($grid-gutter / 2);
+}
+
+// Estils per a columnes de diferents amplades
+@for $i from 1 through $grid-columns {
+    .col-#{$i} {
+        flex: 0 0 calc(100% / $grid-columns * $i);
+        max-width: calc(100% / $grid-columns * $i);
+    }
+}
